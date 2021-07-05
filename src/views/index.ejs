@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lumen/bootstrap.min.css"
+        integrity="sha384-GzaBcW6yPIfhF+6VpKMjxbTx6tvR/yRd/yJub90CqoIn2Tz4rRXlSpTFYMKHCifX" crossorigin="anonymous">
+    <title>BIENVENIDOS AL PORTAL DE ECOSPORT-YPF/ Ver.2021.07.04</title>
+
+</head>
+
+<body>
+    <h5>BIENVENIDOS AL PORTAL DE ECOSPORT-YPF/ Ver.2021.07.04</h5>
+    <pre>
+        <% t_cargas.forEach(function(carga){ %>
+                <h4> <%= carga.created_at %></h4>
+        <% }) %>
+    </pre>
+    <div class="container p-4">
+        <div class="row">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <button class="btn btn-lg btn-success">INGRESAR</button>
+                    </div>
+
+
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
