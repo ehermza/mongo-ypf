@@ -23,4 +23,11 @@ router.post('/', async (req, res) => {
     res.redirect('/');
 });
 
+router.get('/delete', async (req, res) => {
+    // const carga= new Carga();
+    await Carga.remove({}, ()=>{
+        console.log("deleted!");
+        res.redirect('/');
+    });
+});
 module.exports = router;
