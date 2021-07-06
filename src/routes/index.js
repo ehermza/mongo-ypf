@@ -1,3 +1,4 @@
+const { v4: uuid } = require('uuid');
 
 const { Router } = require('express');
 const Carga = require('../models/Carga');
@@ -16,8 +17,10 @@ router.post('/', async (req, res) => {
     const carga = new Carga();
 
     carga.to = 'Comercial Oeste sa';
-    carga.lts_charged = 20.35;
+    carga.litros_ch = 20.35;
     carga.price = 2000;
+    carga.n_ticket= uuid();
+
     await carga.save();
     // carga.product = 'Infinia'
     res.redirect('/');
