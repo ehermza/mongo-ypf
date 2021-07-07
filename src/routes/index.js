@@ -12,14 +12,15 @@ router.get('/', async (req, res) => {
     res.render('index', { t_cargas });
 });
 
-router.post('/', async (req, res) => {
+router.post('/add', async (req, res) => {
     console.log("you are adding a new data")
-    const carga = new Carga();
-
-    carga.to = 'Comercial Oeste sa';
-    carga.litros_ch = 20.35;
-    carga.price = 2000;
-    carga.n_ticket= uuid();
+    console.log(req.body);
+    const carga = new Carga(req.body);
+    
+    // carga.to = 'Comercial Oeste sa';
+    // carga.litros_ch = 20.35;
+    // carga.price = 2000;
+    // carga.n_ticket= uuid();
 
     await carga.save();
     // carga.product = 'Infinia'
